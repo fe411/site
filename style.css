@@ -1,0 +1,188 @@
+/* Estrutura da Página */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Barra de Navegação */
+
+header {
+    background: #009688;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #07ff6e;
+}
+
+/* Ícones e Imagens */
+
+#logo {
+    text-align: center;
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+    margin: 20px auto;
+}
+
+.slider {
+    width: 100%; 
+    max-width: 600px;
+    overflow: hidden;
+    margin: 0 auto; 
+    position: relative;;
+}
+
+.slider img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slider label {
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+
+#slide1:checked ~ .controls label:nth-child(1),
+#slide2:checked ~ .controls label:nth-child(2),
+#slide3:checked ~ .controls label:nth-child(3) {
+    background-color: #555;
+}
+
+#slide1:checked ~ .slides { transform: translateX(0); }
+#slide2:checked ~ .slides { transform: translateX(-100%); }
+#slide3:checked ~ .slides { transform: translateX(-200%); }
+
+/* Seções e Textos */
+
+section {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Formulário de Contato */
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-field textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #009688;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #00796b;
+}
+
+/* Links Redes Sociais */
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    color: #333; 
+    font-size: 20px; 
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #009688;
+}
